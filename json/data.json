@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Света",
+    "age": "25",
+    "photo": "img/cat.jpg"
+  },
+  {
+    "name": "Антон",
+    "age": "28",
+    "photo": "img/cat.jpg"
+  }
+]
