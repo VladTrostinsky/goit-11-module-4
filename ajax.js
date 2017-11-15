@@ -47,51 +47,34 @@ function request(method, url, body, callback) {
 // request – асинхронная функция.
 // Вынести её в обработчик события click;
 
-// var button = document.querySelector(".button");
-// button.addEventListener("click", function(){
-//     request("get", 'json/data.json', null, function(data){
-//         var people = JSON.parse(data);
-//         people.map(addNewPeople);
-//         console.log(data);
-//     });
-// })
+var button = document.querySelector(".button");
+button.addEventListener("click", function(){
+    request("get", 'json/data.json', null, function(data){
+        try{
+            var people = JSON.parse(data);
+            people.map(addNewPeople);
+            console.log(data);
+        } catch (e) {
+            console.log(e);
+        }
+    });
+})
 
 console.log("Запрос еще не обработан");
 
 // jQuery реализация
-$(document).ready(function () {
-    $(".button").on("click", function () {
-        $.ajax({
-            method: "get",
-            url: "json/data.json",
-            data: {
-                name: "Vlad"
-            },
-            success: function (data) {
-                // Используем уже готовую реализацию, но могли бы переписать ее на jQuery.
-                data.map(addNewPeople);
-            },
-            done: function (response) {
-                // Метод выполнится вне зависимости от успеха или провала запроса
-            },
-            erorr: function(){
-
-            }
-        })
-    });
-})
 
 //Fetch API – работает на Promises.
-fetch('http://localhost:63342/goit-11-module-4/json/data.json?_ijt=n5227rt530605lh7m9nrpg3mev')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        // Мы снова получили JS объекты
-        console.log(data);
-    })
-    .catch(function (error) {
-        console.error("Ошибка!");
-    })
+// fetch('http://localhost:63342/goit-11-module-4/json/data.json?_ijt=n5227rt530605lh7m9nrpg3mev')
+//     .then(function (response) {
+//         return response.json();
+//     })
+//     .then(function (data) {
+//         // Мы снова получили JS объекты
+//         console.log(data);
+//     })
+//     .catch(function (error) {
+//         console.error("Ошибка!");
+//     })
 
 

@@ -2,30 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Javascript. Functions.</title>
+    <title>Module 10</title>
+    <style>
+        body.dark{
+            background-color: #333;
+            color:#fff;
+        }
+    </style>
 </head>
 <body>
-    <h1>Module 9 - AJAX, JSON, FETCH API</h1>
+    <h1>Module 10 – LocalStorage, Обработка ошибок</h1>
     <a href="/about.html"></a>
-    <form action="thanks.html" method="POST">
-        <input type="text" placeholder="Name" name="the_name" value="Vlad">
-        <button>Отправить</button>
+    <form id="settings-form">
+        <p>
+            <input class="name" type="text" placeholder="Name" name="the_name">
+        </p>
+        <p>
+            <select class="theme" name="theme">
+                <option value="white" selected>White</option>
+                <option value="dark">Dark</option>
+            </select>
+        </p>
+        <p>
+            Получать уведомления:
+            <input type="checkbox" class="pushes" value="pushes">
+        </p>
+        <button class="save-btn">Сохранить</button>
     </form>
-    <div class="content">
-        <div class="people">
-            <div class="people__item">
-                <h4 class="people__name">Никита</h4>
-                <div class="people__age">Возраст: 31</div>
-                <img class="people__image" src="img/cat.jpg" alt="" width="200">
-            </div>
-        </div>
-        <button class="button">Загрузить других людей</button>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="ajax.js"></script>
+    <button class="clear-btn">Сбросить настройки</button>
+
+    <button class="button">Test</button>
+    <!--<div class="content">-->
+        <!--<div class="people">-->
+            <!--<div class="people__item">-->
+                <!--<h4 class="people__name">Никита</h4>-->
+                <!--<div class="people__age">Возраст: 31</div>-->
+                <!--<img class="people__image" src="img/cat.jpg" alt="" width="200">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<button class="button">Загрузить других людей</button>-->
+    <!--</div>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!--<script src="storage.js"></script>-->
+    <!--<script src="ajax.js"></script>-->
     <!--<script src="prototypes.js"></script>-->
     <!--<script src="jquery-example.js"></script>-->
     <!--<script src="animations.js"></script>-->
     <!--<script src="dom.js"></script>-->
+<scirpt src="es6-1.js"></scirpt>
 </body>
 </html>
